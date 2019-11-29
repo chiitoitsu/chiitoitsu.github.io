@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            input {
+                background: yellow;
+                width: 150px;
+                height: 30px;
+                border: 1px solid red;
+            }
+            img { border: 2px solid black }
+        </style>
+        <script src="../js/jquery-3.4.1.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#btn").click(function() {
+                    $("img").animate({width: "600px"}, 1000);
+                    $("img").animate({height: "400px"}, 1000);
+                    $("img").animate({borderRadius: "50px"}, 1000);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <img src="../img/01.gif" width="300" height="200"><br>
+        <b>고양이</b>
+        <input id="btn" type="button" value="확대하기">
+    </body>
+</html>
