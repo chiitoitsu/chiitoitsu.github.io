@@ -2,42 +2,45 @@
 
 <html>
     <head>
-        <style>
-            a {
-                text-decoration: none;
-            }
-            ul { 
-                list-style-type: none; 
-                padding: 0px;
-            }
-            ul li {
-                border: 1px black solid;
-                padding: 5px;
-                display: inline-block;
-            }
-            header {
-                background-color: black;
-                color: white;
-            }
-        </style>
+        <link href="./css/style.css" rel="stylesheet">
     </head>
     <body>
         <header>
+            <img id="logo" src="img/logo.png">
             <h1>웹 프로그래밍</h1>
         </header>
-        <section>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./sub/sub1.html" target="iframe">Sub1</a></li>
+                <li><a href="./sub/sub2.html" target="iframe">Sub2</a></li>
+                <li><a href="./sub/sub3.html" target="iframe">Sub3</a></li>
+            </ul>
+        </nav>
+        <aside id="left">
+            <h1>카테고리</h1>
             <div>
-                <h3>2019-11-29</h3>
+                <h3>Jquery List</h3>
                 <ul>
-                    <li><a href="./20191129/fade.html">fadeIn / fadeOut</a></li>
-                    <li><a href="./20191129/slide.html">slideUp / slideDown / slideToggle</a></li>
-                    <li><a href="./20191129/slide2.html">slideToggle2</a></li>
-                    <li><a href="./20191129/animate.html">animate</a></li>
-                    <li><a href="./20191129/animate2.html">animate2</a></li>
-                    <li><a href="./20191129/animate3.html">animate3</a></li>
-                    <li><a href="./20191129/animate4.html">animate4</a></li>
+                    <li><a id="a1" href="./20191129/fade.html" target="iframe">fadeIn / fadeOut</a></li>
+                    <li><a id="a2" href="./20191129/slide.html" target="iframe">slideUp / Down / Toggle</a></li>
+                    <li><a id="a3" href="./20191129/slide2.html" target="iframe">slideToggle2</a></li>
+                    <li><a id="a4" href="./20191129/animate.html" target="iframe">animate</a></li>
+                    <li><a id="a5" href="./20191129/animate2.html" target="iframe">animate2</a></li>
+                    <li><a id="a6" href="./20191129/animate3.html" target="iframe">animate3</a></li>
+                    <li><a id="a7" href="./20191129/animate4.html" target="iframe">animate4</a></li>
                 </ul>
             </div>
+        </aside>
+        <section id="main">
+            <article>
+                <iframe id="iframe" name="iframe" width="800" height="600"></iframe>
+            </article>
         </section>
+        <footer>
+            <div>Copyright &copy; 2019 Admin</div>
+            <div>서울시 구로동 111-11번지</div>
+            <div>관리자 : admin@fake.com</div>
+        </footer>
     </body>
 </html>

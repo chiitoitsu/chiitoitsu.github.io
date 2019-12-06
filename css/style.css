@@ -1,0 +1,98 @@
+head, body {
+    margin: 0;
+}
+
+header {
+    height: 80px;
+    clear: both;
+}
+
+header #logo {
+    height: 80px;
+    float: left;
+}
+
+header h1 {
+    padding-top: 20px;
+}
+
+header, nav, aside#left, footer {
+    margin-left: 0px;
+}
+
+nav {
+    width: 100%;
+    margin-right: 40px;
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    padding: 10px 0;
+}
+nav ul li {
+    display: inline;
+    text-transform: uppercase;
+    padding: 0 10px;
+    letter-spacing: 5px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+
+aside#left {
+    width: 20%;
+    float: left;
+}
+
+#left ul {
+    color: white;
+    list-style: none;
+    text-indent: 15px;
+    margin-top: 0;
+    padding: 0;
+}
+
+#left h3 {
+    margin-bottom: 0;
+    background: #e3e3e3;
+}
+#left ul li {
+    background: #3f3f3f;
+    line-height: 30px;
+    font-size: 20px;
+}
+#left ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+#left ul li a:hover {
+    background: #dd0033;
+}
+
+#main {
+    color: #444444;
+    overflow: hidden;
+    float: left;
+    width: 80%;
+    height: 700px;
+}
+
+#iframe {
+    border: solid 1px red;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    background: #e3e3e3;
+    clear: both;
+}

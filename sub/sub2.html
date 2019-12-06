@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            ol { 
+                padding-left: 0;
+                counter-reset: item;
+            }
+            li { 
+                padding-left: 20px;
+                padding-top: 5px;
+                display: block;
+            }
+            .childList>li:hover {
+                color: blue;
+            }
+            li:before { 
+                content: counters(item, ".") ". "; 
+                counter-increment: item 
+            }
+            #index {
+                display: none;
+                margin-top: 20px;
+                width: 400px;
+                border: 1px solid black;
+            }
+        </style>
+        <script src="../js/jquery-3.4.1.js"></script>
+        <script>
+            $(document).ready(function() {
+
+                // div1 ~ div9 스타일 지정
+                const MAX = 9;
+                for (let i = 1; i <= MAX; i++)
+                {
+                    $("#div" + i).css({
+                        "display": "none",
+                        "margin-top": "20px",
+                        "border": "1px solid black",
+                        "width": "400px"
+                    });
+                }
+
+                $("#btn1").click(function (){
+                    $("#index").slideToggle();
+                    for (let i = 1; i <= MAX; i++)
+                        $("#div" + i).slideUp();
+                });
+
+                for (let i = 1; i <= MAX; i++)
+                {
+                    $("#li" + i).click(function (){
+                        $("#index").slideToggle();
+                        $("#div" + i).slideToggle();
+                    });
+                }
+
+            });
+        </script>
+    </head>
+    <body>
+        <h1>비디오 게임의 역사</h1>
+        <input id="btn1" type="button" value="목차보기"><br>
+        <div id="index">
+            <ol class="parentList">
+                <h3>보고싶은 내용을 클릭해주세요</h3>
+                <li>초기 역사
+                    <ol class="childList">
+                        <li id="li1">비디오 게임의 정의</li>
+                        <li id="li2">컴퓨터 게임의 기원</li>
+                        <li id="li3">비디오 게임의 상업화</li>
+                    </ol>
+                </li>
+                <li>새로운 산업
+                    <ol class="childList">
+                        <li id="li4">초기 아케이드 비디오 게임</li>
+                        <li id="li5">1세대 가정용 게임 콘솔과 퐁 복제 게임</li>
+                        <li id="li6">메인프레임 컴퓨터 게임</li>
+                    </ol>
+                </li>
+                <li>황금기
+                    <ol class="childList">
+                        <li id="li7">아케이드 비디오 게임의 황금기</li>
+                        <li id="li8">2세대 콘솔</li>
+                        <li id="li9">초기의 가정용 컴퓨터 게임</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+        <div id="div1">
+            <h3>비디오 게임의 정의</h3>
+            <p>
+                비디오 게임이란 컴퓨터가 사용자의 입력을 받아 정해진 규칙에 따라 처리하고, 
+                그 과정이나 결과를 출력하는 컴퓨터 프로그램을 이용한 게임이다.
+            </p>
+        </div>
+        <div id="div2">
+            <h3>컴퓨터 게임의 기원</h3>
+            <p>
+                현재 알려진 최초로 작성된 컴퓨터 게임은 《튜로챔프》라는 이름의 체스 시뮬레이션으로, 앨런 튜링과 D. G. 챔퍼나운이 1948년에 개발하였으나 실제로 컴퓨터에 구현되지는 않았다. 
+                현재 알려진 실제로 구현된 최초의 컴퓨터 게임은 틱택토와 님 게임이며, 
+                버티 더 브레인, 님로드라는 두 개의 맞춤식 머신에서 동작하였다.
+            </p>
+        </div>
+        <div id="div3">
+            <h3>비디오 게임의 상업화</h3>
+            <p>
+                1970년에 중밀도 집적 회로와 트랜지스터-트랜지스터 논리 회로가 도입되면서 여러 트랜지스터를 하나의 마이크로칩으로 합칠 수 있게 되었고 
+                컴퓨팅의 가격을 상당히 낮출 수 있게 되자 $10,000 보다 낮은 가격의 미니컴퓨터의 새로운 파동에 접어들었다. 
+                가정에 쓰기에 비용이 훨씬 비쌌기 때문에 이러한 진보는 아케이드 게임 산업에 심각하게 고려될 수 있을만큼 컴퓨팅의 비용을 충분히 낮추어 주었으며, 
+                당시 세가 엔터프라이즈의 《페리스코프》, 시카고 코인의 《스피드웨이》와 같은 대형 전자기계 타깃 슈팅 및 드라이빙 게임들이 
+                전자오락실에서 세련된 비주얼 디스플레이와 전자 효과음을 들려줄 수 있는 선구자 역할을 하면서 자체 기술 르네상스를 맞게 되었다.
+            </p>
+        </div>
+        <div id="div4">
+            <h3>초기 아케이드 비디오 게임</h3>
+        </div>
+        <div id="div5">
+            <h3>1세대 가정용 게임 콘솔과 퐁 복제 게임</h3>
+        </div>
+        <div id="div6">
+            <h3>메인프레임 컴퓨터 게임</h3>
+        </div>
+        <div id="div7">
+            <h3>아케이드 비디오 게임의 황금기</h3>
+        </div>
+        <div id="div8">
+            <h3>2세대 콘솔</h3>
+        </div>
+        <div id="div9">
+            <h3>초기의 가정용 컴퓨터 게임</h3>
+        </div>
+    </body>
+</html>
