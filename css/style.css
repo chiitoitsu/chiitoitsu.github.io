@@ -7,13 +7,23 @@ header {
     clear: both;
 }
 
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:visited {
+    color: black;
+}
+
 header #logo {
     height: 80px;
     float: left;
+    margin: 10px;
 }
 
 header h1 {
-    padding-top: 20px;
+    float: left;
 }
 
 header, nav, aside#left, footer {
@@ -23,12 +33,13 @@ header, nav, aside#left, footer {
 nav {
     width: 100%;
     margin-right: 40px;
+    background: #3f3f3f;
 }
 nav ul {
     list-style: none;
     text-align: center;
-    border-top: 1px solid red;
-    border-bottom: 1px solid red;
+    border-top: 3px solid orange;
+    border-bottom: 3px solid orange;
     padding: 10px 0;
 }
 nav ul li {
@@ -39,10 +50,9 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 nav ul li a:hover {
-    text-decoration: underline;
     color: orange;
 }
 
@@ -74,25 +84,27 @@ aside#left {
     display: block;
 }
 #left ul li a:hover {
-    background: #dd0033;
+    background: orange;
 }
 
 #main {
     color: #444444;
     overflow: hidden;
     float: left;
-    width: 80%;
+    width: 75%;
     height: 700px;
+    margin-left: 5%;
 }
 
 #iframe {
-    border: solid 1px red;
+    border: solid 3px orange;
 }
 
 footer {
     width: 100%;
     height: 100px;
     padding: 10px;
-    background: #e3e3e3;
+    background: #3f3f3f;
+    color: white;
     clear: both;
 }
