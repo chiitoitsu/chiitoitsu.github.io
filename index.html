@@ -2,14 +2,9 @@
 
 <html>
     <head>
-        <link href="./css/style.css" rel="stylesheet">
+        <link href="./css/index.css" rel="stylesheet">
         <script src="./js/jquery-3.4.1.js"></script>
-        <script>
-            $(document).ready(function (){
-                $("#iframe").animate({width: "1000px", height: "600px"});
-                $("#iframe").animate({borderRadius: "20px"});
-            });
-        </script>
+        <script src="./js/index.js"></script>
     </head>
     <body>
         <header>
@@ -41,7 +36,7 @@
         </aside>
         <section id="main">
             <article>
-                <iframe id="iframe" name="iframe"></iframe>
+                <iframe id="iframe" name="iframe" src="./sub/iframeMain.html"></iframe>
             </article>
         </section>
         <footer>

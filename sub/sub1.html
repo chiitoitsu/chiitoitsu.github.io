@@ -2,57 +2,9 @@
 
 <html>
     <head>
-        <style>
-            #playSection {
-                width: 300px;
-                padding: 15px;
-                margin-bottom: 15px;
-                border: 1px solid black;
-            }
-        </style>
+        <link href="../css/sub1.css" rel="stylesheet">
         <script src="../js/jquery-3.4.1.js"></script>
-        <script>
-            $(document).ready(function() {
-                $("#btn1").click(function (){
-                    $("#player1").html("플레이어: 가위");
-                    fight(0);
-                });
-                $("#btn2").click(function (){
-                    $("#player1").html("플레이어: 바위");
-                    fight(1);
-                });
-                $("#btn3").click(function (){
-                    $("#player1").html("플레이어: 보");
-                    fight(2);
-                });
-
-                function fight(player)
-                {
-                    // 가위 0 바위 1 보 2
-                    let cpu = Math.floor(Math.random() * 3);
-                    
-                    if (cpu == 0)
-                        $("#player2").html("컴퓨터: 가위");
-                    else if (cpu == 1)
-                        $("#player2").html("컴퓨터: 바위");
-                    else if (cpu == 2)
-                        $("#player2").html("컴퓨터: 보");
-
-                    // 승패 계산
-                    if (player == cpu)
-                        $("#result").html("승부결과: 비김");
-                    else if (player == 0 && cpu == 2)
-                        $("#result").html("승부결과: 플레이어 승");
-                    else if (player == 1 && cpu == 0)
-                        $("#result").html("승부결과: 플레이어 승");
-                    else if (player == 2 && cpu == 1)
-                        $("#result").html("승부결과: 플레이어 승");
-                    else
-                        $("#result").html("승부결과: 컴퓨터 승");
-                }
-                
-            });
-        </script>
+        <script src="../js/sub1.js"></script>
     </head>
     <body>
         <header>
@@ -60,10 +12,16 @@
         </header>
         <section>
             <article>
+                <div id="imgSection">
+                    <img id="player1Img" src="../img/question.png">
+                    <img id="player2Img" src="../img/question.png">
+                </div>
                 <div id="playSection">
                     <div id="player1">플레이어: </div>
                     <div id="player2">컴퓨터: </div>
                     <div id="result">승부결과: </div>
+                    <div id="player1Status">플레이어의 전적: </div>
+                    <div id="player2Status">컴퓨터의 전적: </div>
                 </div>
                 <input id="btn1" type="button" value="가위">
                 <input id="btn2" type="button" value="바위">

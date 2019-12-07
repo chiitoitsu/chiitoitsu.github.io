@@ -1,0 +1,22 @@
+ol { 
+    padding-left: 0;
+    counter-reset: item;
+}
+li { 
+    padding-left: 20px;
+    padding-top: 5px;
+    display: block;
+}
+.childList>li:hover {
+    color: blue;
+}
+li:before { 
+    content: counters(item, ".") ". "; 
+    counter-increment: item 
+}
+#index {
+    display: none;
+    margin-top: 20px;
+    width: 400px;
+    border: 1px solid black;
+}
