@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            input {
+                width: 150px;
+                height: 30px;
+                border: 1px solid red;
+            }
+            img { border: 2px solid black }
+        </style>
+        <script src="../js/jquery-3.4.1.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#btn1").click(function() {
+                    $("#cat").animate({marginLeft: "+=300px"}, "slow");
+                    $("#cat").animate({marginLeft: "-=300px"}, "slow");
+                });
+                $("#btn2").click(function() {
+                    $("#cat").animate({height: "toggle"}, "slow");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <img id="cat" src="../img/01.gif" width="300" height="200"><br>
+        <b>이미지가</b> 움직입니다<br>
+        <input id="btn1" type="button" value="좌우 이동"></input>
+        <input id="btn2" type="button" value="이미지 토글"></input>
+    </body>
+</html>
