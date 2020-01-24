@@ -3,15 +3,33 @@
 <html>
 	<head>
 		<title>임시 페이지</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+		/>
 		<link rel="stylesheet" href="index.css" />
 	</head>
 	<body>
-		<div class="js-clock">
-			<h1></h1>
+		<div class="container">
+			<div class="js-clock">
+				<h1></h1>
+				<button id="js-btn" onclick="selectTime()">24시간 표기</button>
+			</div>
+			<ul>
+				<li>
+					<a href="https://github.com/chiitoitsu"><i class="fab fa-github"></i></a>
+				</li>
+				<li>
+					<a href="./jquery/"><i class="fab fa-js-square"></i></a>
+				</li>
+				<li>
+					<a href="./movie_app/"><i class="fas fa-film"></i></a>
+				</li>
+				<li>
+					<a href="./portfolio/"><i class="fas fa-file"></i></a>
+				</li>
+			</ul>
 		</div>
-		<li><a href="./jquery/">jQuery</a></li>
-		<li><a href="./movie_app/">movie_app</a></li>
-		<li><a href="./portfolio/">portfolio</a></li>
 		<script src="clock.js"></script>
 	</body>
 </html>
