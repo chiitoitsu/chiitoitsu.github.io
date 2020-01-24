@@ -3,7 +3,7 @@ const clockTitle = clockContainer.querySelector('h1')
 const clockButton = clockContainer.querySelector('#js-btn')
 let is_clock24 = false
 
-function getTime() {
+const getTime = () => {
 	const date = new Date()
 	const hours = date.getHours()
 	const mins = date.getMinutes()
@@ -23,15 +23,15 @@ function getTime() {
 	}
 }
 
-function selectTime() {
+const selectTime = () => {
 	is_clock24 = !is_clock24
 	clockButton.innerText = `${is_clock24 ? `12시간 표기` : `24시간 표기`}`
 	getTime()
 }
 
-function init() {
+const initClock = () => {
 	getTime()
 	setInterval(getTime, 1000)
 }
 
-init()
+initClock()
