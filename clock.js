@@ -17,7 +17,7 @@ const getTime = () => {
 	} else {
 		clockTitle.innerText =
 			`${hours < 12 ? `오전 ` : `오후 `}` +
-			`${hours < 10 ? `0${hours % 12}` : `${hours % 12}`}:` +
+			`${hours % 12 == 0 ? `12` : `${hours % 12}`}:` +
 			`${mins < 10 ? `0${mins}` : `${mins}`}:` +
 			`${secs < 10 ? `0${secs}` : `${secs}`}`
 	}
