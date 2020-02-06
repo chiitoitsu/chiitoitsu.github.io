@@ -63,14 +63,14 @@ const selectTime = () => {
 	is_clock24 = !is_clock24
 	clockButton.innerText = `${is_clock24 ? `12시간 표기` : `24시간 표기`}`
 	getTime()
-	getServerTime()
+	// getServerTime()
 }
 
 const initClock = () => {
 	getTime()
-	getServerTime()
+	// getServerTime()
 	setInterval(getTime, 1000)
-	setInterval(getServerTime, 1000)
+	// setInterval(getServerTime, 1000)
 }
 
 initClock()
